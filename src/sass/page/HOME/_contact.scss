@@ -1,0 +1,49 @@
+.contact{
+    margin-top: rem(118);
+    padding-top: rem(71);
+    padding-bottom: rem(64);
+    background:$sub-color;
+
+    @include mq(md) {
+    margin-top: rem(149);
+    padding-top: rem(148);
+    padding-bottom: rem(148);
+    text-align: center;
+    }
+}
+
+.contact__subtitle{
+    left: 56%;
+    @include mq(md) {
+        top: rem(-7);
+        left:23%;
+    }
+}
+
+
+.contact__body{
+    margin-top: rem(19);
+}
+
+.contact__text{
+    letter-spacing: rem(2);
+    line-height: 1.45;
+
+}
+
+.contact__more {
+    text-align: center;
+    margin-top: rem(47);
+
+    @include mq(md) {
+        text-align: center;
+        margin-top: rem(60);
+
+    }
+}
+.contact__more__btn {
+    @include mq(md) {
+      font-size: rem(20);
+      letter-spacing: rem(2);
+    }
+  }

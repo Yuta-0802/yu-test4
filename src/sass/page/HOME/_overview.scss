@@ -1,0 +1,135 @@
+.overview{
+    margin-top: rem(120);
+
+    @include mq(md) {
+    margin-top: rem(201);
+    }
+}
+
+.overview__inner{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(md) {
+    }
+  }
+
+.overview__subtitle{
+    left: 58%;
+
+    @include mq(md) {
+        top: rem(30);
+        left: 28%;
+    }
+}
+
+.overview__container{
+    margin-top: rem(47);
+    background: $sub-text-color;
+
+    @include mq(md) {
+        display: flex;
+        margin-top: rem(34);
+        padding-top: rem(82);
+        padding-bottom: rem(61);
+        background: linear-gradient(270deg, $main-color 0%, $main-color 30%,$sub-text-color 30%, $sub-text-color 100%);
+    }
+
+}
+
+.overview__container__inner{
+    max-width:rem(1150);
+    width: 100%;
+    margin-right:auto;
+    margin-left: auto;
+    flex-direction: row-reverse;
+
+    @include mq(md) {
+        display: flex;
+        padding-bottom: rem(20);
+        padding-right: rem(25);
+        padding-left: rem(25);
+      }
+}
+.overview__image{
+    @include mq(md) {
+        width: 52%;
+        height: 100%;
+    }
+}
+
+.overview__body {
+    padding-top: rem(23);
+    padding-right: rem(19);
+    padding-left: rem(19);
+    padding-bottom: rem(20);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq(md) {
+        width: 48%;
+        text-align: left;
+        margin-right: rem(32);
+        padding: 0;
+    }
+}
+
+.overview__title {
+    font-size: rem(20);
+    text-align: center;
+    letter-spacing: rem(2);
+
+    @include mq(md) {
+        text-align: left;
+        font-size: rem(25);
+        letter-spacing: rem(0.5);
+        padding-top: rem(25);
+    }
+}
+
+.overview__text {
+    margin-top: rem(24);
+    letter-spacing: rem(2);
+    line-height: 1.48;
+
+    @include mq(md) {
+    margin-top: rem(38);
+    text-align: left;
+    letter-spacing: rem(0.5);
+    line-height: 2.2;
+    }
+}
+
+.overview__more {
+    text-align: center;
+    margin-top: rem(28);
+
+    @include mq(md) {
+        text-align: left;
+        margin-top: rem(47);
+    }
+    }
+
+
+//線
+.overview{
+    position: relative;
+
+    &::after{
+        content: '';
+        position:absolute;
+        width:100%;
+        height:rem(1.5);
+        right:0;
+        top:rem(60);
+        background:$accent-color;
+        transform: skewY(105deg);
+        z-index:-1;
+
+        @include mq('md'){
+        top:rem(369);
+        transform: skewY(-45deg);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.page-top{
+    position: fixed;
+    width:rem(45);
+    height:rem(45);
+    right: rem(21);
+    bottom: rem(41);
+    // opacity: 0;
+    // visibility: hidden;
+    transition: all 0.3s ease 0s;
+    background: $white;
+    z-index: 2;
+
+    @include mq(md) {
+        right: rem(32);
+        bottom: rem(31);
+      }
+
+      &:hover {
+        background: $sub-text-color;
+        transition: 0.3s;
+        .page-top__bar1,
+        .page-top__bar2 {
+          background: $white;
+          transition: 0.3s;
+        }
+      }
+
+    // &.is-show {
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
+
+}
+
+.page-top__bars{
+    width: rem(24);
+    height:rem(12);
+    position: relative;
+
+}
+
+.page-top__bar1,
+.page-top__bar2 {
+    position: absolute;
+    background: $sub-text-color;
+    width: rem(20);
+    height: rem(2);
+
+
+
+}
+
+.page-top__bar1{
+    transform: rotate(-45deg);
+    top:rem(21);
+    left:rem(7);
+}
+
+.page-top__bar2{
+    transform: rotate(45deg);
+    top:rem(21);
+    right:rem(-16);
+
+}

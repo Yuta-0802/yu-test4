@@ -1,0 +1,158 @@
+.top-blog{
+    margin-top: rem(102);
+    margin-bottom: rem(98);
+
+    @include mq(md) {
+    margin-top: rem(207);
+    max-width: 1280px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    }
+}
+
+.blog__subtitle{
+    top: rem(-19);
+    left: 53.5%;
+
+    @include mq(md) {
+        top: rem(24);
+        left: 91%;
+    }
+}
+
+.blog__items{
+    margin-top: rem(63);
+
+    @include mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: rem(34);
+    }
+}
+
+.cards__item{
+    width: 100%;
+    &:not(:first-child) {
+        margin-top: rem(26);
+    }
+
+    @include mq(md) {
+        width: calc(33.3% - 25px * 2 / 3);
+        &:not(:first-child) {
+            margin-top: 0;
+        }
+        &:not(:nth-child(3n + 1)) {
+            margin-left: rem(25);
+        }
+        &:nth-child(n + 4) {
+            margin-top: rem(25);
+        }
+    }
+}
+
+.cards-circle{
+    position: relative;
+
+    &::before {
+        content:"New";
+        position: absolute;
+        display: inline-block;
+        top: rem(13);
+        left:rem(-15);
+        transform: translateY(-50%);
+        height: rem(60);
+        width: rem(60);
+        line-height: rem(60);
+        text-align: center;
+        background: #FFBA6A;
+        letter-spacing: rem(2);
+        color:$sub-text-color;
+        border-radius: 50%;
+        z-index:1;
+    }
+}
+
+.card__body{
+    background: $white;
+    color:$sub-text-color;
+    padding: rem(4) rem(21) rem(16);
+
+    &:hover {
+        background: $sub-text-color;
+        transition: 0.3s all;
+    }
+
+    @include mq(md) {
+        padding: rem(4) rem(23) rem(15);
+    }
+
+}
+
+.card__body:hover .card__title,
+.card__body:hover .card__text,
+.card__body:hover .card__date{
+    color: $white;
+    transition: 0.3s all;
+}
+
+.card__title{
+    font-size: rem(18);
+    line-height: (35 / 18);
+    font-weight: $medium;
+    letter-spacing: rem(1);
+
+    @include mq(md) {
+    }
+}
+
+.card__text{
+    margin-top: rem(4);
+    font-size: rem(14);
+    line-height: (26 / 14);
+    letter-spacing: rem(1);
+
+    @include mq(md) {
+    margin-top: rem(7);
+    }
+}
+
+.card__bottom{
+    margin-top: rem(11);
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(md) {
+        margin-top: rem(12);
+        }
+}
+
+.card__category{
+    font-size: rem(14);
+    letter-spacing: rem(1);
+    background: #FFEA2E;
+    padding: rem(0.5) rem(4.5);
+
+    @include mq(md) {
+        padding: rem(3) rem(5);
+        }
+}
+
+.card__date{
+    font-size: rem(14);
+    letter-spacing: rem(1);
+
+    @include mq(md) {
+        padding-top: rem(1);
+        }
+}
+
+.blog__more {
+    text-align: center;
+    margin-top: rem(23);
+
+    @include mq(md) {
+        text-align: center;
+        margin-top: rem(47);
+    }
+}

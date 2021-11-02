@@ -1,0 +1,33 @@
+
+  .title__ja {
+    font-size: rem(20);
+    letter-spacing: rem(2);
+    line-height: (29 / 20);
+    text-align: center;
+    position: relative;
+
+    @include mq('md') {
+      font-size: rem(30);
+    }
+  }
+
+  .title__en {
+    font-size: rem(50);
+    font-family: $second-font-family;
+    color:#F9F871;
+    letter-spacing: rem(2);
+    line-height: (72 / 50);
+    text-align: center;
+    opacity: 0.2;
+    position: absolute;
+    top:rem(-13);
+    left: 60%;
+    transform: translate(-60%, -50%);
+    opacity: 0.2;
+    font-weight: $normal;
+
+    @include mq('md') {
+      font-size: rem(110);
+    }
+  }
+

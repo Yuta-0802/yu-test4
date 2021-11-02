@@ -1,0 +1,117 @@
+.footer{
+    padding-top: rem(53);
+    padding-bottom: rem(48);
+
+    @include mq(md) {
+        padding-top: rem(21);
+        padding-bottom: rem(20);
+    }
+}
+
+.footer__inner{
+    width:100%;
+
+    @include mq(md) {
+        padding-right: rem(32);
+        padding-left: rem(32);
+    }
+
+}
+
+.footer__content{
+    text-align: center;
+
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: rem(3);
+        padding-bottom: rem(55);
+        }
+}
+
+.foooter__logo{
+    width:rem(70);
+    height: rem(30);
+    margin-right: auto;
+    margin-left: auto;
+
+    @include mq(md) {
+        margin-top: rem(11);
+        margin-left: rem(1);
+        }
+
+    img{
+
+
+    }
+}
+
+.footer__items{
+    margin-top: rem(3);
+
+    @include mq(md) {
+        display: flex;
+        margin-left: auto;
+        }
+
+
+}
+
+.footer__item{
+    letter-spacing: rem(1.2);
+    &:not(:first-child) {
+        margin-top: rem(7);
+        }
+
+    @include mq(md) {
+        letter-spacing: rem(2);
+        &:not(:first-child) {
+            margin-left: rem(30);
+            }
+
+        }
+
+        a{
+            display: block;
+            position: relative;
+
+            @include mq(md) {
+                height:rem(35);
+                line-height:rem(35);
+
+                &::after {
+                    content:"";
+                    position: absolute;
+                    bottom: rem(-8);
+                    left: 0;
+                    height: rem(1);
+                    width: 100%;
+                    transition: all 0.3s ease 0s;
+                    }
+
+                &:hover,
+                &.is-active {
+                    &::after {
+                    background: #ffea2e;
+                    }
+                }
+                }
+
+        }
+}
+
+.footer__copy{
+    text-align: center;
+    font-size: rem(11);
+    letter-spacing: rem(1.2);
+    margin-top: rem(33);
+    padding-left: rem(7);
+
+    @include mq(md) {
+    font-size: rem(15);
+    letter-spacing: rem(1.2);
+    margin-top: rem(18);
+    padding-right: rem(2);
+    }
+}

@@ -1,0 +1,152 @@
+.works{
+  margin-top: rem(121);
+
+  @include mq(md) {
+    margin-top: rem(201);
+  }
+}
+
+.works__inner{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(md) {
+  }
+}
+
+.works__subtitle {
+  left: 55%;
+  @include mq(md) {
+    top: rem(30);
+    left: 87.5%;
+  }
+}
+
+.works__cards{
+  margin-top: rem(48);
+  background:$sub-color;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    margin-top: rem(34);
+    background: linear-gradient(90deg, $main-color 0%, $main-color 30%,$sub-text-color 30%, $sub-text-color 100%);
+    padding-top: rem(50);
+    padding-bottom: rem(58);
+  }
+}
+
+.works__cards__inner{
+  max-width:rem(1150);
+  width: 100%;
+  margin-right:auto;
+  margin-left: auto;
+
+  @include mq(md) {
+    display: flex;
+    padding-top:rem(33);
+    padding-bottom: rem(20);
+    padding-right: rem(25);
+    padding-left: rem(25);
+  }
+}
+.works__content {
+  position: relative;
+
+  @include mq(md) {
+    width: 50.6%;
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: rem(-17);
+  left:rem(-3);
+
+  @include mq(md) {
+    left: rem(-22);
+    bottom: rem(-27);
+  }
+}
+
+.swiper-pagination-bullet {
+  background: #C4C4C4;
+
+  @include mq(md) {
+  width: rem(8);
+  height:rem(8);
+  margin-right:rem(20);
+  margin-left: rem(20);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #F9F871;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  &:not(:last-child) {
+    margin-right: rem(8);
+    }
+
+  @include mq(md) {
+    &:not(:last-child) {
+      margin-right: rem(7);
+      }
+    }
+}
+
+.works__body {
+  padding-top: rem(21);
+  padding-right: rem(20);
+  padding-left: rem(20);
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: rem(20);
+
+  @include mq(md) {
+    width: 47%;
+    text-align: center;
+    padding-bottom: rem(10);
+    margin-left: rem(30);
+    padding-left: rem(3);
+    padding-top: rem(28);
+    padding-right: rem(4);
+  }
+}
+
+.works__title {
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  font-weight: $normal;
+  text-align: center;
+
+  @include mq(md) {
+    text-align: left;
+    font-size: rem(25);
+    letter-spacing: rem(0.5);
+  }
+}
+
+.works__text {
+  margin-top: rem(24);
+  letter-spacing: rem(2);
+  line-height: 1.45;
+
+  @include mq(md) {
+    margin-top: rem(37);
+    text-align: left;
+    letter-spacing: rem(0.5);
+    line-height: 2.19;
+  }
+}
+
+.works__more {
+  text-align: center;
+  margin-top: rem(27);
+
+  @include mq(md) {
+    text-align: left;
+    margin-top: rem(46);
+  }
+  }
+

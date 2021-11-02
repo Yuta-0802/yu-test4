@@ -1,0 +1,142 @@
+.news {
+  margin-top: rem(22);
+
+  @include mq(md) {
+    margin-top:rem(31);
+
+  }
+}
+
+.news__inner {
+
+
+@include mq(md) {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  }
+}
+
+.news__body {
+  display:flex;
+  align-items: center;
+
+  @include mq(md) {
+   margin-left: rem(30);
+  }
+}
+
+.news__date{
+  font-size: rem(16);
+  font-weight: $normal;
+}
+
+.news__title {
+margin-top: rem(1);
+margin-left: rem(32);
+font-size: rem(14);
+border: rem(1) solid $white;
+padding-top:rem(5.5);
+padding-right: rem(20);
+padding-bottom: rem(4.5);
+padding-left: rem(20);
+width: rem(100);
+max-width: 100%;
+font-weight: $normal;
+
+@include mq(md) {
+  margin-left: rem(47);
+}
+}
+
+.news__text {
+  margin-top: rem(16);
+  position: relative;
+  line-height: 1.45;
+
+  @include mq(md) {
+    margin-top: 0;
+    margin-left:rem(59);
+  }
+
+  &::after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: rem(1);
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+    }
+
+    &:hover,
+    &.is-active {
+        &::after {
+          background: $white;
+        }
+    }
+
+}
+
+.news__more {
+  text-align: center;
+  margin-top: rem(28);
+
+  @include mq(md) {
+      margin-top: 0;
+      margin-left: rem(50);
+
+  }
+}
+
+.news__more__btn{
+  display: inline-block;
+  position: relative;
+  width: rem(335);
+  max-width:100%;
+  height: rem(50);
+  font-size: rem(20);
+  letter-spacing: rem(2);
+  line-height: rem(50);
+  text-align: center;
+  color:$white;
+  background: $sub-text-color;
+  border: rem(1) solid rgba(255, 255, 255, 1);
+
+  @include mq(md) {
+      height: rem(30);
+      line-height: rem(30);
+      align-items: center;
+      font-size: rem(16);
+      width: rem(134);
+      max-width: 100%;
+      color:$sub-text-color;
+      background:$white;
+      padding: rem(0.2) 0;
+      letter-spacing: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: '';
+    background:$sub-text-color;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: transform .3s;
+  }
+
+  &:hover {
+    color:$white;
+    &::before{
+      transform-origin: left top;
+      transform: scale(1, 1);
+    }
+  }
+    }
+
